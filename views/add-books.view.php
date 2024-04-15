@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>add a book</title>
-</head>
-<body>
-    
+<?php require "views/components/head.php" ?>
+<?php require "views/components/navbar.php" ?>
+
 <h1>add a book</h1>
 
 <form method="POST">
@@ -22,9 +16,7 @@
   <label>Availability:
     <input type="number" name="availability"/>
   </label>
-  <button>Save</button>
+  <button class = "save" >Save</button>
 </form>
 
-
-</body>
-</html>
+<?php require "views/components/footer.php" ?>

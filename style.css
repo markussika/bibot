@@ -1,0 +1,46 @@
+h1{
+    text-align: center;
+}
+body{
+    text-align: center;
+    padding-top: 60px;
+}
+nav {
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .invalid-data {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: red;
+    font-size: 0.8em;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50px;
+    backdrop-filter: blur(4px);
+    background-color: rgba(200, 200, 200, 0.5);
+    box-shadow: 0px 5px 10px rgba(10, 10, 10, 0.3);
+    border-bottom: 1px solid #ccc;
+  }  
+  .delete-form {
+    display: inline-block;
+  }
+  button:hover{
+    background-color: lightyellow;
+  }
+  .delete:hover{
+    background-color: red;
+  }
+  .save:hover{
+    background-color: green;
+  }
+  
