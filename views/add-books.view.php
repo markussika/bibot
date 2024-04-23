@@ -5,18 +5,18 @@
 
 <form method="POST">
   <label>Book name:
-    <input name="name"/>
+    <input name="name"/><br>
   </label>
   <label>Author:
-    <input name="author"/>
+    <input name="author"/><br>
   </label>
   <label>Release year:
-    <input name="release_year"/>
+    <input name="release_year"/><br>
   </label>
   <label>Availability:
-    <input type="number" name="availability"/>
+    <input type="number" name="availability"/><br>
   </label>
-  <button class = "save" >Save</button>
+  <button class = "save" >Save</button><br>
 </form>
 
 <?php require "views/components/footer.php" ?>

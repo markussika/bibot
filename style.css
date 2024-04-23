@@ -5,13 +5,20 @@ body{
     text-align: center;
     padding-top: 60px;
 }
+.catalogitem{
+  height: 100px;
+  width: 50px;
+  
+}
+button
+
 nav {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
     height: 100%;
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: space-between;
   }
   .invalid-data {
     position: absolute;
@@ -43,4 +50,41 @@ nav {
   .save:hover{
     background-color: green;
   }
+
+  label {
+    display: block;
+  }
   
+  .explanation {
+    font-size: 0.7px;
+    color: #666;
+  }
+  
+  input {
+    border: 1px solid red;
+ 
+  }
+  
+  .flash {
+    opacity: 0;
+  
+    visibility: hidden;
+    animation: disappear 3s;
+  }
+  
+  @keyframes disappear {
+    0% {
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    80% {
+      opacity: 1;
+      visibility: visible;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
