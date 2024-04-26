@@ -1,28 +1,45 @@
-<?php require "views/components/head.php" ?>
-<?php require "views/components/navbar.php" ?>
-<h1>Login</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add A Book</title>
+  <link rel="stylesheet" href="views/styles/login.style.css">
+</head>
+<body>
 
-<form method="POST">
-  <label>
-    username:
-    <input name="username" type="username"/>
-  </label>
-  <?php if(isset($errors["username"])) {?>
-    <p><?= $errors["username"] ?></p>
+    
+
+<?php require "views/components/navbar.php" ?>
+
+
+
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        
+    </div>
+    <form method="POST">
+        <h3>Login</h3>
+
+        <label for="username">Username:</label>
+        <?php if(isset($errors["username"])) {?>
+    <p class="error"><?= $errors["username"] ?></p>
   <?php } ?>
-  <label>
-    Password:
-    <input name="password" type="password"/>
-  </label>
-  <?php if(isset($errors["password"])) {?>
+        <input name="username" type="text" placeholder="Username" id="username">
+
+        <label for="password">Password:</label>
+        <?php if(isset($errors["password"])) {?>
     <p><?= $errors["password"] ?></p>
   <?php } ?>
-  <button>Login</button>
-</form>
-<a href="/register">Register</a>
+        <input name="password" type="password" placeholder="Password" id="password">
 
-<?php if(isset($_SESSION["flash"])) { ?>
+        <button>Log In</button>
+        
+    </form>
+    <?php if(isset($_SESSION["flash"])) { ?>
   <p class="flash"><?= $_SESSION["flash"] ?></p>
 <?php } ?>
 
+    
 <?php require "views/components/footer.php" ?>

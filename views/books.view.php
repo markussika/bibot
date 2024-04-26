@@ -1,17 +1,27 @@
-<?php require "views/components/head.php" ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="views\styles\books.style.css">
+</head>
+<body>
+    
+
 <?php require "views/components/navbar.php" ?>
 
 <div class="container">
     <h1>Catalog</h1>
 
     <?php foreach($catalogs as $catalog) { ?>
-    <div >
+    <div class="catalog-item">
     <a  href="/show?id=<?= $catalog['id'] ?>">
         <p>
-            <span class="catalogitem">Book name: <?= htmlspecialchars($catalog['name']) ?></span><br>
-            <span class="catalogitem">Author: <?= htmlspecialchars($catalog['author']) ?></span><br>
-            <span  class="catalogitem">Release year: <?= htmlspecialchars($catalog['release_year']) ?></span><br>
-            <span  class="catalogitem">Availability: <?= htmlspecialchars($catalog['availability']) ?> books</span>
+            <span>Book name: <?= htmlspecialchars($catalog['name']) ?></span><br>
+            <span>Author: <?= htmlspecialchars($catalog['author']) ?></span><br>
+            <span>Release year: <?= htmlspecialchars($catalog['release_year']) ?></span><br>
+            <span>Availability: <?= htmlspecialchars($catalog['availability']) ?> books</span>
         </p>
         
         </a>
